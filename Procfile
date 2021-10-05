@@ -1,1 +1,1 @@
-lci: bin/lci
+lci: bin/lci-elf
