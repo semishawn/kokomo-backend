@@ -1,1 +1,1 @@
-lci: bin/lci-elf
+lci: ./bin/lci-elf
