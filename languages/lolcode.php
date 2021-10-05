@@ -8,7 +8,7 @@ $lolFileName = "script.lol";
 
 $lolFile = fopen($lolFileName, "w");
 fwrite($lolFile, $lolcode);
-$output = shell_exec("ls");
+$output = shell_exec("heroku run lci " . $lolFileName);
 fclose($lolFile);
 unlink($lolFileName);
 
