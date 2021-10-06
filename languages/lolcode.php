@@ -8,7 +8,7 @@ $lolFileName = "script.lol";
 
 $lolFile = fopen($lolFileName, "w");
 fwrite($lolFile, $lolcode);
-$output = shell_exec($lolcode);
+$output = shell_exec("../bin/lci-elf " . $lolFileName);
 fclose($lolFile);
 unlink($lolFileName);
 
