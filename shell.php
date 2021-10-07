@@ -11,7 +11,7 @@ $scriptName = "script.{$extension}";
 $script = fopen($scriptName, "w");
 fwrite($script, $code);
 
-$output = shell_exec("../bin/{$bin} {$scriptName}");
+$output = shell_exec("bin/{$bin} {$scriptName}");
 
 fclose($script);
 unlink($scriptName);
