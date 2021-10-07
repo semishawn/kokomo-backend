@@ -6,12 +6,13 @@ error_reporting(E_ALL);
 $code = $_REQUEST["code"];
 $extension = $_REQUEST["extension"];
 $bin = $_REQUEST["bin"];
+$options = $_REQUEST["options"];
 
 $scriptName = "script.{$extension}";
 $script = fopen($scriptName, "w");
 fwrite($script, $code);
 
-$output = shell_exec("bin/{$bin} {$scriptName}");
+$output = shell_exec("bin/{$bin} {$options} {$scriptName}");
 
 fclose($script);
 unlink($scriptName);
