@@ -12,7 +12,7 @@ $scriptName = "script.{$extension}";
 $script = fopen($scriptName, "w");
 fwrite($script, $code);
 
-$output = shell_exec("timeout 5 bin/{$bin} {$options} {$scriptName}");
+$output = shell_exec("timeout 10 bin/{$bin} {$options} {$scriptName}");
 
 fclose($script);
 unlink($scriptName);
